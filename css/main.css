@@ -179,7 +179,7 @@ article header .author a {
 #content {
     background: rgba(255, 255, 255, 0.5);
     width: 710px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     padding-bottom: 30px;
 }
 
@@ -280,7 +280,7 @@ ul.twitter-recommendations li {
     }
     
     #container, #content, .articles, .page-header {
-        width: 300px;
+        width: 310px;
     }
     
     article {
