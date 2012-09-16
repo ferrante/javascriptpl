@@ -106,15 +106,20 @@ article pre code {
 
 article {
     width: 580px;
+    border: 1px solid #fff;
     border-radius: 4px;
     background: #fff;
     margin-bottom: 20px;
     box-shadow: 0 1px 1px 1px #d5d5d5;
-    padding: 30px 20px 30px 20px;
+    padding: 29px 19px;
     color: #2B2D30;
     position: relative;
     margin-left: 10px;
     clear: left;
+}
+
+article:target {
+    border-color: #41b7d8;
 }
 
 article p {
