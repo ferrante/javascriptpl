@@ -13,7 +13,7 @@
                     <div class="articles">
                         <header class="page-header">
                             <h2>JavaScript.pl</h2>
-                            <p class="about">Strona zawiera porady dot. programowanie w JavaScript, ważne strony, konferencje i ważnych członków polskiego, i zagranicznego community. Projekt został oparty na <a href="https://github.com/ferrante/javascriptpl">GitHubie</a> i każdy może pomóc w jego tworzeniu, a jego inicjatorem jest <a href="http://ferrante.pl">Damian Wielgosik</a>.</p>
+                            <p class="about">Strona zawiera porady dot. programowanie w JavaScript, ważne strony, konferencje i ważnych członków polskiego, i zagranicznego community. Projekt został oparty na <a href="https://github.com/ferrante/javascriptpl">GitHubie</a> i każdy może pomóc w jego tworzeniu, a jego inicjatorem jest <a href="http://ferrante.pl">Damian Wielgosik</a> (<a href="http://twitter.com/varjs">@varjs</a>).</p>
                         </header>
                         <aside class="sidebar">
                             <h3>Nauka</h3>
@@ -88,13 +88,56 @@
                                <li><a href="http://js.gd/">JS Goodies</a></li>
                            </ul>
                         </aside>
+                        <!-- TIP 4 -->
+                        <article id="tip-4">
+                            <header>
+                                <h1>JSLint Twoim przyjacielem</h1>
+                                <span class="author"><a href="http://twitter.com/varjs">@varjs</a></span>
+                                <a class="tip-counter" href="#tip-4">#4</a>
+                            </header>
+                            <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
+                            <p>Oba projekty można użyć w systemach continous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
+                        </article>
+                        <!-- TIP 3 -->
+                        <article id="tip-3">
+                            <header>
+                                <h1>parseInt("08")</h1>
+                                <span class="author"><a href="http://twitter.com/varjs">@varjs</a></span>
+                                <a class="tip-counter" href="#tip-3">#3</a>
+                            </header>
+                            <p>Pamiętaj, że <em>parseInt</em> traktuję stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
+                            <pre><code>parseInt("08"); // 0
+parseInt("08", 10); // 8</code></pre>
+                        </article>
+                        <!-- TIP 2 -->
+                        <article id="tip-2">
+                            <header>
+                                <h1>"for in" nie dla tablic</h1>
+                                <span class="author"><a href="http://twitter.com/varjs">@varjs</a></span>
+                                <a class="tip-counter" href="#tip-2">#2</a>
+                            </header>
+                            <p>Pamiętaj, że pętle for in stworzone są tylko i wyłącznie do iteracji po obiektach:</p>
+                            <pre><code>var obj = { key : 1 };
+for (var i in obj) { 
+    console.log(i); // "key"
+}</code></pre>
+                            <p>For in używany z tablicami będzie iterował również przez własności <em>.prototype</em> tablicy, co jest efektem niepożądanym.</p>
+                        </article>
+                        <!-- TIP 1 -->
                         <article id="tip-1">
                             <header>
-                                <h1>Hello world!</h1>
+                                <h1>Tworzenie tablic i obiektów</h1>
                                 <span class="author"><a href="http://twitter.com/varjs">@varjs</a></span>
                                 <a class="tip-counter" href="#tip-1">#1</a>
                             </header>
-                            <p></p>
+                            <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
+                            <pre><code>var arr = new Array();
+var obj = new Object();</code></pre>
+                            <p>W JavaScript robi się to następująco:</p>
+                            <pre><code>var arr = [];
+var obj = {};</code></pre>
+                            <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
+                            <pre><code>var Object = null;</code></pre>
                         </article>
                     </div>
                 </div>
