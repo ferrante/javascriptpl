@@ -58,10 +58,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .tip-counter {
-    font-family:" Museo 900", Verdana, serif; 
-    font-size-adjust:0.52; 
-    font-weight:900; 
-    font-style:normal;
+    font-family: "Museo 900", Verdana, serif; 
+    font-size-adjust: 0.52; 
+    font-weight: 900; 
+    font-style: normal;
 }
 
 a {
