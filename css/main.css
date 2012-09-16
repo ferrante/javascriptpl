@@ -265,23 +265,23 @@ article {
     margin-right: 10px;
 }
 }
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     #wrapper {
-        width: 640px;
+        width: 480px;
     }
     
     #container, #content, .articles {
-        width: 600px;
+        width: 440px;
     }
     
     article {
-        width: 460px;
+        width: 280px;
     }
     
     .sidebar {
         float: none;
         clear: none;
-        width: 530px;
+        width: 410px;
         padding-left: 30px;
     }
     
