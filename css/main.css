@@ -237,7 +237,34 @@ ul.twitter-recommendations li {
     width: 34px;
     border-radius: 3px;
 }
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+#wrapper {
+    width: 640px;
+}
 
+#container, #content, .articles {
+    width: 600px;
+}
+
+article {
+    width: 460px;
+}
+
+.sidebar {
+    float: none;
+    clear: none;
+    width: 530px;
+    padding-left: 30px;
+}
+
+.sidebar ul li {
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-right: 10px;
+}
+}
 @media screen and (max-width: 640px) {
     #wrapper {
         width: 640px;
