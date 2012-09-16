@@ -1,0 +1,266 @@
+/**
+ *
+ * CSS reset. Support for selected HTML5 tags.
+ *
+ **/
+
+body, p, div, h1, h2, h3, h4, h5, h6, input, textarea, img, blockquote, dl, dt, dd, fieldset, legend, ol, ul, li, pre, code, figure {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+header, footer, section, article, nav, aside {
+    display: block;
+}
+
+address, cite, q, dfn {
+  font-style: normal;
+}
+
+a, ins, del {
+  text-decoration: none
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+q:after, q:before,
+blockquote:after, blockquote:before {
+    content: "";
+    content: none;
+}
+
+q {
+    font-style: italic;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+ *
+ * Globals
+ *
+ **/
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    font-family:"Proxima Nova Regular", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size-adjust: 0.488; 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .tip-counter {
+    font-family:" Museo 900", Verdana, serif; 
+    font-size-adjust:0.52; 
+    font-weight:900; 
+    font-style:normal;
+}
+
+a {
+    color: #41b7d8;
+}
+
+a:hover {
+    color: #41b7d8;
+    text-decoration: underline;
+}
+
+
+/**
+ *
+ * Code snippets. Works both for posts and comments.
+ *
+ **/
+
+article pre {
+    background: #FAF8DE;
+    border: 1px solid #D9D9D7;
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: auto;
+    display: block;
+    clear: left;
+    position: relative;
+    overflow: auto;
+}
+
+article pre code {
+    display: inline-block;
+    width: 100%;
+    font-family: "Monaco", Courier new, Arial, Helvetica, sans-serif;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+article {
+    width: 580px;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px 1px #d5d5d5;
+    padding: 30px 20px 30px 20px;
+    color: #2B2D30;
+    position: relative;
+    margin-left: 10px;
+    clear: left;
+}
+
+article p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+    letter-spacing: 0.1px;
+}
+
+article h1 {
+    font-size: 18px; 
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: #262625;
+    width: 500px;
+    padding:0;
+}
+
+article header .author {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    width: 50px;
+    display: block;
+
+}
+
+article header .author a {
+    font-size: 14px;
+    color: #717171;
+    font-style: italic;
+}
+
+.page-header {
+    width: 680px;
+    margin-bottom: 60px;
+    margin-top: 45px;
+    margin-left: 30px;
+    
+}
+
+.page-header h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.page-header .about {
+    font-style: italic;
+    font-size: 15px;
+    line-height: 25px;
+    width: 80%;
+    color: #666666;
+}
+
+#wrapper {
+    background: url(../img/bgr.png);
+    width: 100%;
+    overflow: hidden;
+}
+
+#content {
+    background: rgba(255, 255, 255, 0.5);
+    width: 710px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+#container {
+    width: 1100px;
+    margin: auto;
+}
+
+.tip-counter {
+    position: absolute;
+    right: -80px;
+    width: 80px;
+    text-align: center;
+    top: 10px;
+    color: #cccccc;
+}
+
+.articles {
+    width: 955px;
+}
+
+.sidebar {
+    width: 225px;
+    float: right;
+    clear: right;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li:first-child {
+    padding-top: 0;
+}
+.sidebar ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.sidebar ul li a {
+    font-size: 13px;
+}
+
+.sidebar h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+ul.twitter-recommendations li {
+    display: inline;
+    border: none;
+}
+
+.twitter-recommendations li img {
+    width: 34px;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 640px) {
+    #wrapper {
+        width: 640px;
+    }
+    
+    #container, #content, .articles {
+        width: 600px;
+    }
+    
+    article {
+        width: 460px;
+    }
+    
+    .sidebar {
+        float: none;
+        clear: none;
+        width: 530px;
+        padding-left: 30px;
+    }
+    
+    .sidebar ul li {
+        display: inline-block;
+        padding-bottom: 10px;
+        margin-right: 10px;
+    }
+}
