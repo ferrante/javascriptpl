@@ -162,6 +162,10 @@ article header .author a {
     margin-bottom: 20px;
 }
 
+.page-header h2 a {
+    color: #000;
+}
+
 .page-header .about {
     font-style: italic;
     font-size: 14px;
