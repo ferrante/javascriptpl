@@ -89,11 +89,9 @@ article pre {
     border: 1px solid #D9D9D7;
     width: 85%;
     padding: 10px;
-    margin-bottom: 20px;
     margin: auto;
+    margin-bottom: 20px;
     display: block;
-    clear: left;
-    position: relative;
     overflow: auto;
 }
 
