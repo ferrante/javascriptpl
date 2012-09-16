@@ -270,12 +270,12 @@ article {
         width: 480px;
     }
     
-    #container, #content, .articles {
+    #container, #content, .articles, .page-header {
         width: 440px;
     }
     
     article {
-        width: 280px;
+        width: 310px;
     }
     
     .sidebar {
