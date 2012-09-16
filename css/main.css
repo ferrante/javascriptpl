@@ -130,7 +130,7 @@ article h1 {
     line-height: 22px;
     margin-bottom: 30px;
     color: #262625;
-    width: 70%;
+    width: 80%;
     padding:0;
 }
 
@@ -280,7 +280,7 @@ ul.twitter-recommendations li {
     }
     
     #container, #content, .articles, .page-header {
-        width: 310px;
+        width: 300px;
     }
     
     article {
