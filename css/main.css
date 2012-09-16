@@ -164,7 +164,7 @@ article header .author a {
 
 .page-header .about {
     font-style: italic;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 25px;
     width: 80%;
     color: #666666;
@@ -186,6 +186,7 @@ article header .author a {
 #container {
     width: 1100px;
     margin: auto;
+    overflow: hidden;
 }
 
 .tip-counter {
