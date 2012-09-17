@@ -129,7 +129,7 @@ typeof arr; // "object"
 typeof obj; // "object"</code></pre>
                             <p>W ECMAScript 3 sprawdzaliśmy, czy zmienna jest tablicą następująco:</p>
                             <pre><code>var arr = [1, 2, 3];
-if (Object.prototype.toString.call(arr) === "[object Object]") {}</code></pre>
+if (Object.prototype.toString.call(arr) === "[object Array]") {}</code></pre>
                         <p>Na szczęście najnowsza wersja ECMAScript 5 wprowadza funkcję <em>Array.isArray</em>:</p>
                         <pre><code>var arr = [1, 2, 3];
 if (Array.isArray(arr)) {}</code></pre>
