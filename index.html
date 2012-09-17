@@ -96,6 +96,38 @@
                                <li><a href="http://js.gd/">JS Goodies</a></li>
                            </ul>
                         </aside>
+                        <!-- TIP 5 -->
+                        <article id="tip-5">
+                            <header>
+                                <h1>Lista elementów a tablica</h1>
+                                <span class="author"><a href="http://twitter.com/porada" title="Dominik Porada">@porada</a></span>
+                                <a class="tip-counter" href="#tip-5">#5</a>
+                            </header>
+                            <p>Obecność wielu tablico-podobnych obiektów to jedna z bolączek każdego początkującego programisty JavaScript. <code>NodeList</code> jest tego doskonałym przykładem.</p>
+                            <p>Nie wgłębiając się w szczegóły, <a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177"><code>NodeList</code></a> to lista elementów drzewa <abbr title="Document Object Model">DOM</abbr> — prościej mówiąc: wynik użycia metody typu <code>document.getElementsByTagName()</code>, <code>document.getElementsByClassName()</code>, <code>document.querySelectorAll()</code> itp.</p>
+                            <h2>Czym lista elementów przypomina tablicę?</h2>
+                            <p>Spróbujmy znaleźć wszystkie elementy <code class="language-markup">&lt;p&gt;</code>, których bezpośrednim rodzicem jest <code class="language-markup">&lt;body&gt;</code>:</p>
+                            <pre><code class="javascript">var myList = document.querySelectorAll(&quot;body &gt; p&quot;);</code></pre>
+                            <p>Używając właściwości <code>length</code>, możemy sprawdzić, ile ich jest:</p>
+                            <pre><code class="javascript">console.log(myList.length); //→ 10
+console.log(myList[5]); //→ &lt;p class=&quot;content&quot;&gt;…&lt;/p&gt;</code></pre>
+                            <h2>Co ją odróżnia?</h2>
+                            <p>Schody zaczynają się wówczas, gdy pojawia się konieczność użycia jednej z <a href="https://developer.mozilla.org/pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/Array#Metody_modyfikuj.C4.85ce">metod modyfikujących</a>. Załóżmy, że chcielibyśmy „obciąć” ostatni element <code>myList</code>:</p>
+                            <pre><code class="javascript">myList.pop(); //→ TypeError: &apos;undefined&apos; is not a function</code></pre>
+                            <p>Spróbujmy dodać nowy element do listy:</p>
+                            <pre><code class="javascript">var first = document.getElementsByClassName(&quot;first&quot;)[0];
+myList.unshift(first); //→ TypeError: &apos;undefined&apos; is not a function</code></pre>
+                            <p>Powód błędów? <strong><code>NodeList</code> to nie <code>Array</code>,</strong> dlatego też oba te obiekty nie dzielą tych samych metod.</p>
+                            <h3>W jaki sposób przekształcić listę elementów w tablicę?</h3>
+                            <p><abbr title="Na przykład">Np.</abbr> używając jednego z krótszych i prostszych sposobów:</p>
+                            <pre><code class="javascript">var myArray = Array.prototype.slice.call(myList, 0);</code></pre>
+                            <p>Sprawdźmy teraz możliwości naszej tablicy:</p>
+                            <pre><code class="javascript">myArray.pop(); //→ &lt;p class=&quot;footer&quot;&gt;…&lt;/p&gt;
+console.log(myArray.length); //→ 9
+
+var first = document.getElementsByClassName(&quot;first&quot;)[0];
+myArray.unshift(first); //→ 10</code></pre>
+                        </article>
                         <!-- TIP 4 -->
                         <article id="tip-4">
                             <header>
