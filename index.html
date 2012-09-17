@@ -114,7 +114,7 @@
                                 <pre><code>var news = $("div.news");</code></pre>
                                 <p>Ładowanie całego jQuery tylko dla takiej funkcjonalności jest często przerostem formy nad treścią. Z łatwością możesz skorzystać z <em>document.querySelectorAll</em>:</p>
                                 <pre><code>var news = document.querySelectorAll("div.news"); // wszystkie elementy div.news
-    var news = document.querySelector("div.news"); // tylko pierwszy element</code></pre>
+var news = document.querySelector("div.news"); // tylko pierwszy element</code></pre>
                             <p>Sprawdź wsparcie dla querySelector wśród współczesnych przeglądarek na <a href="http://caniuse.com/#feat=queryselector">canIUse.com</a>.</p>
                             </article>
                             <!-- TIP 9 -->
@@ -126,9 +126,9 @@
                                 </header>
                                 <p>Dzięki automatycznemu wywoływaniu anonimowych funkcji możesz łatwo wprowadzić wewnętrzny scope zmiennych, dzięki czemu będą one dostępne tylko w tej funkcji.</p>
                                 <pre><code>(function() {
-        var privateVar = 1; 
-    })();
-    console.log(privateVar); // undefined</code></pre>
+    var privateVar = 1; 
+})();
+console.log(privateVar); // undefined</code></pre>
                             </article>
                             <!-- TIP 8 -->
                             <article id="tip-8">
