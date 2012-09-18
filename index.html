@@ -18,6 +18,60 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
+
+                        <!-- TIP 11 -->
+                        <article id="tip-11">
+                            <header>
+                                <h1>Wartości domyślne zmiennych przekazywanych do funkcji</h1>
+                                <span class="author"><a href="http://twitter.com/afterdesign">@afterdesign</a></span>
+                                <a class="tip-counter" href="#tip-11">#11</a>
+                            </header>
+                            <p>Jak wiadomo zmienne podczas definiowania funkcji nie mogą posiadać wartości domyślnych.
+                                Jednakże funkcje w JavaScript w ogóle nie wymagają przekazania wartości. 
+                                I tak przykładowo funkcję:
+                            </p>
+                            <pre><code>functin add(one, two) {
+    return one + two;
+}</code></pre>
+                            <p>można wywołać bez podawania parametrów (oczywiście w tym wypadku funkcja add zwróci 
+                                <em>NaN</em>):
+                            </p>
+                            <pre><code>
+add();
+                            </code></pre>
+                            <p>Jednakże wykorzystując operator <em>typeof</em> można nadawać 
+                                wartości domyślne parametrom:
+                            </p>
+                            <pre><code>
+function add(one, two) {
+    if(typeof one === "undefined") {var one = 0;}
+    if(typeof two === "undefined") {var two = 0;}
+
+    return one + two;
+}
+                            </code></pre>
+                            <p>
+                                Można także walidować dane wejściowe i rzucać wyjątek:
+                            </p>
+                            <pre><code>
+function add(one, two) {
+    if(typeof one !== "number" || typeof two !== "number") {
+        throw {
+            "name": "TypeError",
+            "message": "funkcja add wymaga liczb"
+        }
+    }
+
+    return one + two;
+}
+                            </code></pre>
+                        <p>
+                            Oczywiście należy uważać na wartości domyślne ponieważ nieumiejętne wykorzystywanie 
+                            może doprowadzić do poważnych błędów i dlatego zaleca się wykorzystywanie wyjątków.
+                        </p>
+                        </article>
+
+                        <!-- TIP 10 -->
                         <article id="tip-10">
                             <header>
                                 <h1>Zapomnij o jQuery, jest querySelector</h1>
