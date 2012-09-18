@@ -44,21 +44,21 @@ table {
 
 /**
  *
- * Globals
+ * Global
  *
  **/
-
+ 
 body {
-    background: #f5f5f5;
+    background: #f5f5f5 url("../img/bgr.png");
     color: #333;
-    font-family:"Proxima Nova Regular", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: "Proxima Nova Regular", 'Helvetica Neue', "Arial", sans-serif;
     font-size-adjust: 0.488;
     font-weight: normal;
     font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6, .tip-counter {
-    font-family: "Museo 900", Verdana, serif;
+    font-family: "Museo 900", "Verdana", serif;
     font-size-adjust: 0.52;
     font-weight: 900;
     font-style: normal;
@@ -74,100 +74,85 @@ a:hover {
 }
 
 a:visited {
-    color: #3AA0BD;
+    color: #3aa0bd;
 }
-
 
 /**
  *
- * Code snippets. Works both for posts and comments.
+ * Layout
  *
  **/
 
-article pre {
-    background: #FAF8DE;
-    border: 1px solid #D9D9D7;
-    width: 85%;
-    padding: 10px;
-    margin: auto;
-    margin-bottom: 20px;
-    display: block;
-    overflow: auto;
+.wrap, 
+.content,
+.sidebar,
+.page-header {
+    /* ignore padding and border width in % calc */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-article code {
-    font-family: "Monaco", Courier new, Arial, Helvetica, sans-serif;
-    color: #1f1f1f;
-    font-size: 13px;
-    font-weight: normal;
-}
-
-article pre code {
-    display: inline-block;
+.wrap {
     width: 100%;
+    max-width: 1100px;
+    /* add right padding to shift layout to the left on large screens */
+    padding-right: 138px;
+    margin: 0 auto;
 }
 
-article {
-    width: 580px;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    background: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 1px 1px 1px #d5d5d5;
-    padding: 29px 19px;
-    color: #2B2D30;
-    position: relative;
-    margin-left: 10px;
-    clear: left;
-}
-
-article:target {
-    border-color: #41b7d8;
-}
-
-article p {
-    font-size: 15px;
-    line-height: 24px;
-    text-align: left;
-    margin-bottom: 20px;
-    letter-spacing: 0.1px;
-}
-
-article h1 {
-    font-size: 24px;
-    line-height: 22px;
-    margin-bottom: 30px;
-    color: #262625;
-    width: 80%;
-    padding:0;
-}
-
-article header .author {
-    position: absolute;
-    right: 40px;
-    top: 30px;
-    width: 50px;
+.columns::after {
+    content: "";
     display: block;
-
+    clear: both;
 }
 
-article header .author a {
-    font-size: 14px;
-    color: #717171;
-    font-style: italic;
+.columns > .column {
+    float: left;
+}
+
+.content {
+    /* make room for the sidebar */
+    margin-right: 250px;                  
+    /* rgba() fallback */
+    background: #fdfdfd;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #d0d0d0;
+    /* proper rgba() values */
+    background-color: rgba(255, 255, 255, 0.5);
+    border-color: rgba(0, 0, 0, 0.15);
 }
 
 .page-header {
-    width: 680px;
-    margin-bottom: 60px;
-    margin-top: 45px;
-    margin-left: 30px;
-
+    /* expand header to 100% width */
+    margin-right: -250px;
+    padding: 45px 250px 60px 30px;
 }
+
+.content .column.first {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.content .column.last {
+    /* move sidebar out of the visual container */
+    width: 250px;
+    float: right;
+    margin-right: -250px;
+    padding-left: 20px;
+}
+
+/**
+ *
+ * Page header
+ *
+ **/
 
 .page-header h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 0 80px 20px 0;
 }
 
 .page-header h2 a {
@@ -178,145 +163,98 @@ article header .author a {
     font-style: italic;
     font-size: 15px;
     line-height: 25px;
-    width: 80%;
-    color: #666666;
+    color: #666;
+    margin-right: 80px;
 }
 
-#wrapper {
-    background: url(../img/bgr.png);
+/**
+ *
+ * Articles
+ *
+ **/
+
+.article-list article {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 1px #d5d5d5;
+    padding: 29px 19px;
+    color: #2b2d30;
+    position: relative;
+    margin: 0 80px 20px 10px;
+}
+
+.article-list article:target {
+    border-color: #41b7d8;
+}
+
+.article-list article header {
+    /* tabular layout to avoid brute positioning */
+    display: table;
     width: 100%;
-    overflow: auto;
-}
-
-#content {
-    background: rgba(255, 255, 255, 0.5);
-    width: 710px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding-bottom: 30px;
-}
-
-#container {
-    width: 1100px;
-    margin: auto;
-}
-
-.tip-counter {
-    position: absolute;
-    right: -80px;
-    width: 80px;
-    text-align: center;
-    top: 10px;
-    color: #cccccc;
-    font-size: 18px;
-}
-
-.articles {
-    width: 955px;
-}
-
-.sidebar {
-    width: 225px;
-    float: right;
-    clear: right;
-}
-
-.sidebar ul {
-    list-style: none;
     margin-bottom: 30px;
 }
 
-.sidebar ul li:first-child {
-    padding-top: 0;
-}
-.sidebar ul li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #d7d7d7;
+.article-list article h1,
+.article-list article .author {
+    display: table-cell;
 }
 
-.sidebar ul li a {
+.article-list article h1 {
+    /* force title to take max space
+       table renderer will still leave space for author */
+    width: 100%;
+    padding-right: 8px;
+}
+
+.article-list article .author a {
     font-size: 14px;
+    color: #717171;
+    font-style: italic;
 }
 
-.sidebar h3 {
-    margin-bottom: 18px;
+.article-list article .tip-counter {
+    position: absolute;
+    /* don't provide top and shift a bit with margin to align with heading */
+    margin-top: 3px;
+    /* take 100% of gutter without setting width */
+    left: 100%;
+    right: -81px;
+    margin-left: 1px;
+    text-align: center;
+    color: #ccc;
     font-size: 18px;
 }
 
-ul.twitter-recommendations li {
-    display: inline;
-    border: none;
+.article-list article p {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+    letter-spacing: 0.1px;
 }
 
-.twitter-recommendations li img {
-    width: 34px;
-    border-radius: 3px;
+.article-list article h1 {
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    color: #262625;
 }
 
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
-    #wrapper {
-        width: 480px;
-        overflow: hidden;
-    }
-
-    #container, #content, .articles, .page-header {
-        width: 470px;
-    }
-
-    article {
-        width: 410px;
-    }
-
-    .sidebar {
-        float: none;
-        clear: none;
-        width: 410px;
-        padding-left: 30px;
-    }
-
-    .sidebar ul li {
-        display: inline-block;
-        padding-bottom: 10px;
-        margin-right: 10px;
-    }
-
-    .tip-counter {
-        display: none;
-    }
+.article-list article pre {
+    background: #FAF8DE;
+    border: 1px solid #D9D9D7;
+    padding: 10px;
+    margin: 20px 30px;
+    overflow: auto;
 }
 
-@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
-    #wrapper {
-        width: 320px;
-        overflow: hidden;
-    }
-
-    #container, #content, .articles, .page-header {
-        width: 310px;
-    }
-
-    article {
-        width: 250px;
-    }
-
-    .sidebar {
-        float: none;
-        clear: none;
-        width: 250px;
-        padding-left: 30px;
-    }
-
-    .sidebar ul li {
-        display: inline-block;
-        padding-bottom: 10px;
-        margin-right: 10px;
-    }
-
-    .tip-counter {
-        display: none;
-    }
+.article-list article code {
+    font-family: "Monaco", "Courier New", sans-serif;
+    color: #1f1f1f;
+    font-size: 13px;
+    font-weight: normal;
 }
-
 
 /**
  * prism.js default theme for JavaScript, CSS and HTML
@@ -328,7 +266,7 @@ ul.twitter-recommendations li {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  	color: slategray;
+  	color: #778899;
 }
 
 .token.punctuation {
@@ -379,4 +317,48 @@ ul.twitter-recommendations li {
 
 .token.entity {
   	cursor: help;
+}
+
+/**
+ *
+ * Sidebar
+ *
+ **/
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li:first-child {
+    padding-top: 0;
+}
+.sidebar ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.sidebar ul li a {
+    font-size: 14px;
+}
+
+.sidebar h3 {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.sidebar .twitter-recommendations li {
+    display: inline;
+    border: none;
+}
+
+.sidebar .twitter-recommendations li a {
+    border-bottom-width: 0;
+}
+
+.sidebar .twitter-recommendations li img {
+    width: 34px;
+    height: 34px;
+    border-radius: 3px;
 }
