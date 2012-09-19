@@ -18,6 +18,29 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
+                        <article id="tip-12">
+                            <header>
+                                <h1>Losowa liczba z podanego zakresu</h1>
+                                <span class="author"><a href="http://twitter.com/vokiel">@vokiel</a></span>
+                                <a class="tip-counter" href="#tip-12">#12</a>
+                            </header>
+                            <p>Czasami potrzebujemy wygenerować losową liczbę całkowitą z podanego zakresu dwóch liczb. Niestety dostępna funkcja <code>Math.random();</code> generuję licz z przedziału 0-1, zatem potrzebujemy własnej.</p>
+                            <pre><code>
+function rand( min, max ){
+    min = parseInt( min, 10 );
+    max = parseInt( max, 10 );
+
+    if ( min > max ){
+      var tmp = min;
+      min = max;
+      max = tmp;
+    }
+
+    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+}
+</code></pre>
+                            <p>Kolejność parametrów w zasadzie nie ma znaczenia.</p>
+                        </article>
                         <article id="tip-10">
                             <header>
                                 <h1>Zapomnij o jQuery, jest querySelector</h1>
