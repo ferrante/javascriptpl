@@ -58,7 +58,9 @@ indexFileTemplateData.articles.map(function(article, idx) {
     // set the right tip_counter
     article.tip_counter = this.length - idx;
     
-    var articleOutput = Mustache.render(articleTemplate, article, {
+    var articleOutput = Mustache.render(indexTemplate, {
+        articles: [article]
+    }, {
         article: articleTemplate
     });
     fs.writeFileSync('../'+article.url, articleOutput, 'utf-8');    
