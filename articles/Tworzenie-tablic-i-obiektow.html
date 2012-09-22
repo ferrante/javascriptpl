@@ -1,8 +1,15 @@
-<article id="tip-">
+<article id="tip-3">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>Tworzenie tablic i obiektów</h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/Tworzenie-tablic-i-obiektow.html">#3</a>
     </header>
-    
+    <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
+        <pre><code>var arr = new Array();
+var obj = new Object();</code></pre>
+        <p>W JavaScript robi się to następująco:</p>
+        <pre><code>var arr = [];
+var obj = {};</code></pre>
+        <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
+        <pre><code>var Object = null;</code></pre>
 </article>

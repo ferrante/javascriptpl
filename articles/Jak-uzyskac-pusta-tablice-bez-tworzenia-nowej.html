@@ -1,8 +1,16 @@
-<article id="tip-">
+<article id="tip-2">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>Jak uzyskać pustą tablicę bez tworzenia nowej?</h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/Jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">#2</a>
     </header>
-    
+    <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
+        <pre><code>var arr = [1, 2, 3];
+// ...
+arr = [];</code></pre>
+        <p>Jest to dobry pomysł, ale jeśli zależy nam na optymalizacji nawet tak trywialnego przypadku (sprawdza się to w kontekście developmentu gier, gdzie najlepiej zużywać jak najmniej pamięci) możemy skorzystać z właściwości <em>length</em>:</p>
+        <pre><code>var arr = [1, 2, 3];
+arr.length = 0;
+console.log(arr); // []</code></pre>
+    <p>W ten sposób korzystamy zawsze z tej samej struktury danych i przy okazji unikamy tworzenia nowej tablicy.</p>
 </article>

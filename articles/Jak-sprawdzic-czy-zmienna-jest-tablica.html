@@ -1,8 +1,18 @@
-<article id="tip-">
+<article id="tip-8">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>Jak sprawdzić, czy zmienna jest tablicą?</h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/Jak-sprawdzic-czy-zmienna-jest-tablica.html">#8</a>
     </header>
-    
+    <p>Sprawdzenie, czy zmienna jest tablicą było w JavaScript nie do końca prostym zadaniem. Niestety, <em>typeof</em> nie daje nam jednoznacznej odpowiedzi, ponieważ zwraca to samo dla tablic i obiektów:</p>
+        <pre><code>var arr = [1, 2, 3];
+var obj = {};
+typeof arr; // "object"
+typeof obj; // "object"</code></pre>
+        <p>W ECMAScript 3 sprawdzaliśmy, czy zmienna jest tablicą następująco:</p>
+        <pre><code>var arr = [1, 2, 3];
+if (Object.prototype.toString.call(arr) === "[object Array]") {}</code></pre>
+    <p>Na szczęście najnowsza wersja ECMAScript 5 wprowadza funkcję <em>Array.isArray</em>:</p>
+    <pre><code>var arr = [1, 2, 3];
+if (Array.isArray(arr)) {}</code></pre>
 </article>

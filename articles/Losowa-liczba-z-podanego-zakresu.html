@@ -1,8 +1,21 @@
-<article id="tip-">
+<article id="tip-11">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>Losowa liczba z podanego zakresu</h1>
+        <span class="author"><a href="http://twitter.com/vokiel">@vokiel</a></span>
+        <a class="tip-counter" href="/articles/Losowa-liczba-z-podanego-zakresu.html">#11</a>
     </header>
-    
+    <p>Czasami musimy wygenerować losową liczbę całkowitą z podanego zakresu. Niestety dostępna funkcja <code>Math.random();</code> generuje liczby z przedziału 0-1. Własna implementacja funkcji <em>rand</em> może wyglądać tak:</p><pre><code>
+function rand( min, max ){
+    min = parseInt( min, 10 );
+    max = parseInt( max, 10 );
+
+    if ( min > max ){
+        var tmp = min;
+        min = max;
+        max = tmp;
+    }
+
+    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+}</code></pre>
+        <p>Kolejność parametrów w zasadzie nie ma znaczenia.</p>
 </article>

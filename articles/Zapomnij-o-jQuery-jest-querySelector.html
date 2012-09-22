@@ -1,8 +1,13 @@
-<article id="tip-">
+<article id="tip-7">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>Zapomnij o jQuery, jest querySelector</h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/Zapomnij-o-jQuery-jest-querySelector.html">#7</a>
     </header>
-    
+    <p>Największą zaletą frameworka jQuery był łatwy sposób pobierania elementów drzewa DOM według selektorów CSS. Na przykład:</p>
+        <pre><code>var news = $("div.news");</code></pre>
+        <p>Ładowanie całego jQuery tylko dla takiej funkcjonalności jest często przerostem formy nad treścią. Z łatwością możesz skorzystać z <em>document.querySelectorAll</em>:</p>
+        <pre><code>var news = document.querySelectorAll("div.news"); // wszystkie elementy div.news
+var news = document.querySelector("div.news"); // tylko pierwszy element</code></pre>
+        <p>Sprawdź wsparcie dla querySelector wśród współczesnych przeglądarek na <a href="http://caniuse.com/#feat=queryselector">canIUse.com</a>.</p>
 </article>

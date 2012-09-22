@@ -1,8 +1,10 @@
-<article id="tip-">
+<article id="tip-1">
     <header>
-        <h1></h1>
-        <span class="author"><a href=""></a></span>
-        <a class="tip-counter" href="">#</a>
+        <h1>parseInt("08")</h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/parseInt08.html">#1</a>
     </header>
-    
+    <p>Pamiętaj, że <em>parseInt</em> traktuje stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
+        <pre><code>parseInt("08"); // 0
+parseInt("08", 10); // 8</code></pre>
 </article>
