@@ -2,7 +2,7 @@
     <title>Jak uzyskać pustą tablicę bez tworzenia nowej?</title>
     <author>varjs</author>
     <author_url>http://twitter.com/varjs</author_url>
-    <date>2012-09-16</date>
+    <date>2012-09-17</date>
     <content>
         <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
         <pre><code>var arr = [1, 2, 3];
