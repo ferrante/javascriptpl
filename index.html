@@ -24,7 +24,7 @@
                                 <span class="author"><a href="http://twitter.com/vokiel">@vokiel</a></span>
                                 <a class="tip-counter" href="#tip-12">#12</a>
                             </header>
-                            <p>Czasami potrzebujemy wygenerować losową liczbę całkowitą z podanego zakresu dwóch liczb. Niestety dostępna funkcja <code>Math.random();</code> generuję licz z przedziału 0-1, zatem potrzebujemy własnej.</p>
+                            <p>Czasami musimy wygenerować losową liczbę całkowitą z podanego zakresu. Niestety dostępna funkcja <code>Math.random();</code> generuje liczby z przedziału 0-1. Własna implementacja funkcji <em>rand</em> może wyglądać tak:</p>
                             <pre><code>
 function rand( min, max ){
     min = parseInt( min, 10 );
