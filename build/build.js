@@ -45,16 +45,8 @@ files.forEach(function(file, idx) {
     
     // each article has its own url
     article.url = createArticleURL(article);
-    
+
     indexFileTemplateData.articles.push(article);
-    
-    articleOutput = Mustache.render(articleTemplate, {
-        articles: [article]
-    }, {
-        article: articleTemplate
-    });
-    
-    fs.writeFileSync('../'+article.url, articleOutput, 'utf-8');
 });
 
 // sort articles
@@ -62,12 +54,19 @@ indexFileTemplateData.articles.sort(function(a, b) {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
+indexFileTemplateData.articles.map(function(article, idx) {
+    // set the right tip_counter
+    article.tip_counter = this.length - idx;
+    
+    var articleOutput = Mustache.render(articleTemplate, article, {
+        article: articleTemplate
+    });
+    fs.writeFileSync('../'+article.url, articleOutput, 'utf-8');    
+    return article;
+}, indexFileTemplateData.articles);
+
 var indexOutput = Mustache.render(indexTemplate, {
-    articles: indexFileTemplateData.articles.map(function(article, idx) {
-        // set the right tip_counter
-        article.tip_counter = this.length - idx;
-        return article;
-    }, indexFileTemplateData.articles)
+    articles: indexFileTemplateData.articles
 }, {
     article: articleTemplate
 });
