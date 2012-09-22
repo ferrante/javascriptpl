@@ -1,0 +1,14 @@
+<article>
+    <title>"for in" nie dla tablic</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2012-09-16</date>
+    <content>
+        <p>Pamiętaj, że pętle for in stworzone są tylko i wyłącznie do iteracji po obiektach:</p>
+        <pre><code>var obj = { key : 1 };
+for (var i in obj) {
+    console.log(i); // "key"
+}</code></pre>
+        <p>For in używany z tablicami będzie iterował również przez własności <em>.prototype</em> tablicy, co jest efektem niepożądanym.</p>
+    </content>
+</article>

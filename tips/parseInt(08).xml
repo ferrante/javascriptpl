@@ -1,0 +1,11 @@
+<article>
+    <title>parseInt("08")</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2012-09-16</date>
+    <content>
+        <p>Pamiętaj, że <em>parseInt</em> traktuje stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
+        <pre><code>parseInt("08"); // 0
+parseInt("08", 10); // 8</code></pre>
+    </content>
+</article>
