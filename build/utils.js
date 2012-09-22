@@ -1,5 +1,5 @@
 exports.createSlug = function(str){
-   return str.replace(/[^A-Za-z0-9-]+/g, '-').toLowerCase();
+   return str.toLowerCase().replace(/[^A-Za-z0-9-]+/g, '-');
 };
 
 exports.removeAccent = function(str) {

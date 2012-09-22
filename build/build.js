@@ -13,7 +13,7 @@ var ARTICLE_FILE_TEMPLATE = '../templates/article.mustache';
 var GENERATED_INDEX_FILE = '../index.html';
 
 var createArticleURL = function(article) {
-    return '/articles/'+utils.createSlug(utils.removeAccent(article.title)) + '.html'
+    return '/articles/'+utils.createSlug(utils.removeAccent(article.title.toLowerCase())) + '.html'
 };
 
 // we need to pass some data to the Mustache templates at the end to render a full list of articles
