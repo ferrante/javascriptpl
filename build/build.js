@@ -59,7 +59,8 @@ indexFileTemplateData.articles.map(function(article, idx) {
     article.tip_counter = this.length - idx;
     
     var articleOutput = Mustache.render(indexTemplate, {
-        articles: [article]
+        articles: [article],
+        title: article.title
     }, {
         article: articleTemplate
     });
@@ -68,7 +69,8 @@ indexFileTemplateData.articles.map(function(article, idx) {
 }, indexFileTemplateData.articles);
 
 var indexOutput = Mustache.render(indexTemplate, {
-    articles: indexFileTemplateData.articles
+    articles: indexFileTemplateData.articles,
+    title: 'JavaScript.pl - naucz się JavaScriptu!'
 }, {
     article: articleTemplate
 });
