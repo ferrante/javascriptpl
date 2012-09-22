@@ -22,7 +22,7 @@
     <header>
         <h1>Losowa liczba z podanego zakresu</h1>
         <span class="author"><a href="http://twitter.com/vokiel">@vokiel</a></span>
-        <a class="tip-counter" href="/articles/Losowa-liczba-z-podanego-zakresu.html">#11</a>
+        <a class="tip-counter" href="/articles/losowa-liczba-z-podanego-zakresu.html">#11</a>
     </header>
     <p>Czasami musimy wygenerować losową liczbę całkowitą z podanego zakresu. Niestety dostępna funkcja <code>Math.random();</code> generuje liczby z przedziału 0-1. Własna implementacja funkcji <em>rand</em> może wyglądać tak:</p><pre><code>
 function rand( min, max ){
@@ -42,7 +42,7 @@ function rand( min, max ){
     <header>
         <h1>Zaprzyjaźnij się z operatorem porównania '==='</h1>
         <span class="author"><a href="http://twitter.com/lydiwil">lydiawil</a></span>
-        <a class="tip-counter" href="/articles/Zaprzyjaznij-sie-z-operatorem-porownania-.html">#10</a>
+        <a class="tip-counter" href="/articles/zaprzyjaznij-sie-z-operatorem-porownania-.html">#10</a>
     </header>
     <p>W innych językach programowania przeważnie porównujemy ze sobą elementy za pomocą podwójnego znaku równości '=='. Jednak ten operator nie uwzględnia typu porównywanych obiektów (JS próbuje przekształcić obiekty na wspólny typ), z czego może wyniknąć wiele nieoczekiwanych błedów w kodzie.</p>
         <pre><code>0 == "0" // => true
@@ -56,7 +56,7 @@ undefined === null // => false</code></pre>
     <header>
         <h1>Tworzenie wewnętrznego scope</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Tworzenie-wewnetrznego-scope.html">#9</a>
+        <a class="tip-counter" href="/articles/tworzenie-wewnetrznego-scope.html">#9</a>
     </header>
     <p>Dzięki automatycznemu wywoływaniu anonimowych funkcji możesz łatwo wprowadzić wewnętrzny scope zmiennych, dzięki czemu będą one dostępne tylko w tej funkcji.</p>
         <pre><code>(function() {
@@ -67,7 +67,7 @@ console.log(privateVar); // undefined</code></pre>
     <header>
         <h1>Jak sprawdzić, czy zmienna jest tablicą?</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Jak-sprawdzic-czy-zmienna-jest-tablica.html">#8</a>
+        <a class="tip-counter" href="/articles/jak-sprawdzic-czy-zmienna-jest-tablica.html">#8</a>
     </header>
     <p>Sprawdzenie, czy zmienna jest tablicą było w JavaScript nie do końca prostym zadaniem. Niestety, <em>typeof</em> nie daje nam jednoznacznej odpowiedzi, ponieważ zwraca to samo dla tablic i obiektów:</p>
         <pre><code>var arr = [1, 2, 3];
@@ -84,7 +84,7 @@ if (Array.isArray(arr)) {}</code></pre>
     <header>
         <h1>Zapomnij o jQuery, jest querySelector</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Zapomnij-o-jQuery-jest-querySelector.html">#7</a>
+        <a class="tip-counter" href="/articles/zapomnij-o-jquery-jest-queryselector.html">#7</a>
     </header>
     <p>Największą zaletą frameworka jQuery był łatwy sposób pobierania elementów drzewa DOM według selektorów CSS. Na przykład:</p>
         <pre><code>var news = $("div.news");</code></pre>
@@ -96,7 +96,7 @@ var news = document.querySelector("div.news"); // tylko pierwszy element</code><
     <header>
         <h1>Największy i najmniejszy element w tablicy</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Najwiekszy-i-najmniejszy-element-w-tablicy.html">#6</a>
+        <a class="tip-counter" href="/articles/najwiekszy-i-najmniejszy-element-w-tablicy.html">#6</a>
     </header>
     <p>Przyjmijmy, że mamy do czynienia z następującą tablicą:</p>
         <pre><code>var arr = [1, 2, 3];</code></pre>
@@ -110,7 +110,7 @@ Math.min.apply(null, arr); // 1</code></pre>
     <header>
         <h1>JSLint Twoim przyjacielem</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/JSLint-Twoim-przyjacielem.html">#5</a>
+        <a class="tip-counter" href="/articles/jslint-twoim-przyjacielem.html">#5</a>
     </header>
     <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
         <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
@@ -130,7 +130,7 @@ for (var i in obj) {
     <header>
         <h1>Tworzenie tablic i obiektów</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Tworzenie-tablic-i-obiektow.html">#3</a>
+        <a class="tip-counter" href="/articles/tworzenie-tablic-i-obiektow.html">#3</a>
     </header>
     <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
         <pre><code>var arr = new Array();
@@ -144,7 +144,7 @@ var obj = {};</code></pre>
     <header>
         <h1>Jak uzyskać pustą tablicę bez tworzenia nowej?</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/Jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">#2</a>
+        <a class="tip-counter" href="/articles/jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">#2</a>
     </header>
     <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
         <pre><code>var arr = [1, 2, 3];
@@ -159,7 +159,7 @@ console.log(arr); // []</code></pre>
     <header>
         <h1>parseInt("08")</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/parseInt08.html">#1</a>
+        <a class="tip-counter" href="/articles/parseint08.html">#1</a>
     </header>
     <p>Pamiętaj, że <em>parseInt</em> traktuje stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
         <pre><code>parseInt("08"); // 0
