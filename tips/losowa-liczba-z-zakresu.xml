@@ -1,0 +1,22 @@
+<article>
+    <title>Losowa liczba z podanego zakresu</title>
+    <author>@vokiel</author>
+    <author_url>http://twitter.com/vokiel</author_url>
+    <date>2012-09-22</date>
+    <content>
+        <p>Czasami musimy wygenerować losową liczbę całkowitą z podanego zakresu. Niestety dostępna funkcja <code>Math.random();</code> generuje liczby z przedziału 0-1. Własna implementacja funkcji <em>rand</em> może wyglądać tak:</p><pre><code>
+function rand( min, max ){
+    min = parseInt( min, 10 );
+    max = parseInt( max, 10 );
+
+    if ( min > max ){
+        var tmp = min;
+        min = max;
+        max = tmp;
+    }
+
+    return Math.floor( Math.random() * ( max - min + 1 ) + min );
+}</code></pre>
+        <p>Kolejność parametrów w zasadzie nie ma znaczenia.</p>
+    </content>
+</article>

@@ -1,0 +1,13 @@
+<article>
+    <title>Tworzenie wewnętrznego scope</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2012-09-17</date>
+    <content>                            
+        <p>Dzięki automatycznemu wywoływaniu anonimowych funkcji możesz łatwo wprowadzić wewnętrzny scope zmiennych, dzięki czemu będą one dostępne tylko w tej funkcji.</p>
+        <pre><code>(function() {
+    var privateVar = 1; 
+})();
+console.log(privateVar); // undefined</code></pre>
+    </content>
+</article>

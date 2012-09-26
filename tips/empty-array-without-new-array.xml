@@ -1,0 +1,17 @@
+<article>
+    <title>Jak uzyskać pustą tablicę bez tworzenia nowej?</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2012-09-17</date>
+    <content>
+        <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
+        <pre><code>var arr = [1, 2, 3];
+// ...
+arr = [];</code></pre>
+        <p>Jest to dobry pomysł, ale jeśli zależy nam na optymalizacji nawet tak trywialnego przypadku (sprawdza się to w kontekście developmentu gier, gdzie najlepiej zużywać jak najmniej pamięci) możemy skorzystać z właściwości <em>length</em>:</p>
+        <pre><code>var arr = [1, 2, 3];
+arr.length = 0;
+console.log(arr); // []</code></pre>
+    <p>W ten sposób korzystamy zawsze z tej samej struktury danych i przy okazji unikamy tworzenia nowej tablicy.</p>
+    </content>
+</article>

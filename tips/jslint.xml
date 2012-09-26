@@ -1,0 +1,10 @@
+<article>
+    <title>JSLint Twoim przyjacielem</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2012-09-16</date>
+    <content>
+        <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
+        <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
+    </content>
+</article>
