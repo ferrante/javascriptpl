@@ -1,0 +1,27 @@
+<article>
+    <title>Używaj lokalnych zmiennych</title>
+    <author>@nandy_andy</author>
+    <author_url>http://twitter.com/nandy_andy</author_url>
+    <date>2012-09-23</date>
+    <content>
+        <p>Implementując pętlę, która ma przejść po wszystkich elementach tablicy w jakimś określonym celu twórz zmienną lokalną, która zachowuje informację o wielkości tablicy:</p>
+        <pre><code>
+var arr = ['a', 'b', 'c', 'd', 'e', 'f'];
+for(var i = arr.length; 0 &lt; i; i--) {
+    console.log(arr[i]);
+}</code></pre>
+        <p>Zmienne lokalne są również dobrym nawykiem przy użyciu jQuery i zmianach w DOM:</p>
+        <pre><code>
+var div = $('#container'),
+    arr = ['a', 'b', 'c', 'd', 'e', 'f'],
+    html = '&lt;ul&gt;';
+
+for(var i = arr.length; 0 &lt; i; i--) {
+    html += '&lt;li&gt;' + arr[i] + '&lt;/li&gt;';
+}
+
+html += '&lt;/ul&gt;';
+div.append(html);</code></pre>
+        <p>Używanie zmiennych lokalnych zabezpiecza Cię przed nadpisywaniem zmiennych globalnych i zwiększa wydajność aplikacji.</p>
+    </content>
+</article>
