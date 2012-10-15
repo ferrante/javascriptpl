@@ -11,7 +11,7 @@
         <p>Jakie są alternatywy? Można użyć parametru <em>async</em> z HTML5:</p>
         <pre><code>&lt;head&gt;
     &lt;script src="main.js" async="true"&gt;&lt;/script&gt;</code></pre>
-        <p>Warto też wiedzieć, że aby uniknąć oczekiwania i nie polegać na parametrze <em>async</em>, można również dołączyć swoje skrypty dopiero w &lt;body&gt; na samym końcu dokumentu HTML. Mamy wtedy pewność, że DOM jest załadowany i gotowy do użycia (a więc zapomnieć można o zdarzeniu DOMContentLoaded).</p>.
+        <p>Warto też wiedzieć, że aby uniknąć oczekiwania i nie polegać na parametrze <em>async</em>, można również dołączyć swoje skrypty dopiero w &lt;body&gt; na samym końcu dokumentu HTML. Mamy wtedy pewność, że DOM jest załadowany i gotowy do użycia (a więc zapomnieć można o zdarzeniu DOMContentLoaded).</p>
         <p><a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script">Więcej w temacie na MDN</a>.</p>
     </content>
 </article>
