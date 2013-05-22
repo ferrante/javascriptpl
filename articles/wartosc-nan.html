@@ -6,7 +6,7 @@
         <link href="/css/main.css" rel="stylesheet" />
         <link href="http://f.fontdeck.com/s/css/jmBwByoYbwcbdS6OIMDcZ0MWIss/javascript.pl/23891.css" rel="stylesheet" />
         <link href="/favicon.png" rel="icon" type="image/png" />
-        <title>Największy i najmniejszy element w tablicy</title>
+        <title>Wartość NaN</title>
     </head>
     <body class="language-javascript">
 
@@ -18,20 +18,26 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
-<article id="tip-5">
+<article id="tip-13">
     <header>
-        <h1>Największy i najmniejszy element w tablicy</h1>
+        <h1>Wartość NaN</h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/najwiekszy-i-najmniejszy-element-w-tablicy.html">#5</a>
+        <a class="tip-counter" href="/articles/wartosc-nan.html">#13</a>
     </header>
-    <p>Przyjmijmy, że mamy do czynienia z następującą tablicą:</p>
-        <pre><code>var arr = [1, 2, 3];</code></pre>
-        <p>Jak znaleźć jej największą wartość? Zapewne do głowy przychodzi Ci pętla i dodatkowa zmienna przechowująca aktualnie największy element. W JavaScript można to zrobić kompleksowo, przy pomocy <em>Math.max</em>:</p>
-        <pre><code>var arr = [1, 2, 3];
-Math.max.apply(null, arr); // 3</code></pre>
-        <p>Podobnie da się zrobić z najmniejszą wartością, wykorzystując <em>Math.min</em>:</p>
-        <pre><code>var arr = [1, 2, 3];
-Math.min.apply(null, arr); // 1</code></pre>
+    <p>Często w wyniku operacji arytmetycznych otrzymujemy wynik o wartości <code>NaN</code>. Skrót pochodzi od wyrażenia <em>not a number</em>. Wartość tę możemy dostać na przykład poprzez podzielenie liczby przez stringa:</p>
+        <pre><code>var i = 10;
+var result = i / "foobar";
+console.log(result); // NaN</code></pre>
+        <p>Jak więc sprawdzić, czy rezultalt to NaN, by uniknąć dalszych błędów w aplikacji? Można użyć funkcji <code>isNaN</code>:</p>
+        <pre><code>isNaN(result); // true</code></pre>
+		<p>Jest to problematyczne, o ile weźmiemy pod uwagę, że sprawdzana wartość będzie czymś innym niż <code>NaN</code>:</p>
+		<pre><code>isNaN({}); // true</code></pre>
+		<p>Można temu zaradzić definiując własną funkcję do sprawdzenia, czy zmienna to <code>NaN</code>. Otóż warto zauważyć, że <code>NaN</code> jako jedyna wartość nie daje prawdy przy porównaniu do samej siebie:</p>
+		<pre><code>result === result; // false</code></pre>
+		<p>Na tej podstawie konstruujemy własną funkcję sprawdzającą, alternatywną do <code>isNaN</code>:</p>
+		<pre><code>var customIsNaN = function(i) {
+	return i !== i;
+}</code></pre>
 </article>                    </section>
                 </div>
                 <aside class="sidebar column last">
