@@ -45,7 +45,6 @@ files.forEach(function(file, idx) {
     
     // each article has its own url
     article.url = createArticleURL(article);
-
     indexFileTemplateData.articles.push(article);
 });
 
@@ -57,7 +56,7 @@ indexFileTemplateData.articles.sort(function(a, b) {
 indexFileTemplateData.articles.map(function(article, idx) {
     // set the right tip_counter
     article.tip_counter = this.length - idx;
-    
+
     var articleOutput = Mustache.render(indexTemplate, {
         articles: [article],
         title: article.title,
@@ -65,6 +64,7 @@ indexFileTemplateData.articles.map(function(article, idx) {
     }, {
         article: articleTemplate
     });
+    article.title = '<a href="'+article.url+'">'+article.title+'</a>';
     fs.writeFileSync('../'+article.url, articleOutput, 'utf-8');    
     return article;
 }, indexFileTemplateData.articles);
