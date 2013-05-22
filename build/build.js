@@ -60,7 +60,8 @@ indexFileTemplateData.articles.map(function(article, idx) {
     
     var articleOutput = Mustache.render(indexTemplate, {
         articles: [article],
-        title: article.title
+        title: article.title,
+        fb: '<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>'
     }, {
         article: articleTemplate
     });
