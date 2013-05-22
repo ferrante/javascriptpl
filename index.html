@@ -9,7 +9,6 @@
         <title>JavaScript.pl - naucz się JavaScriptu!</title>
     </head>
     <body class="language-javascript">
-
         <div class="wrap">
             <div class="content columns">
                 <header class="page-header">
@@ -38,6 +37,7 @@ console.log(result); // NaN</code></pre>
 		<pre><code>var customIsNaN = function(i) {
 	return i !== i;
 }</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-12">
     <header>
         <h1>Skrypty w &lt;head&gt; lub w &lt;body&gt; - różnice</h1>
@@ -53,6 +53,7 @@ console.log(result); // NaN</code></pre>
     &lt;script src="main.js" async="true"&gt;&lt;/script&gt;</code></pre>
         <p>Warto też wiedzieć, że aby uniknąć oczekiwania i nie polegać na parametrze <em>async</em>, można również dołączyć swoje skrypty dopiero w &lt;body&gt; na samym końcu dokumentu HTML. Mamy wtedy pewność, że DOM jest załadowany i gotowy do użycia (a więc zapomnieć można o zdarzeniu DOMContentLoaded).</p>
         <p><a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script">Więcej w temacie na MDN</a>.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-11">
     <header>
         <h1>Losowa liczba z podanego zakresu</h1>
@@ -73,6 +74,7 @@ function rand( min, max ){
     return Math.floor( Math.random() * ( max - min + 1 ) + min );
 }</code></pre>
         <p>Kolejność parametrów w zasadzie nie ma znaczenia.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-10">
     <header>
         <h1>Zaprzyjaźnij się z operatorem porównania '==='</h1>
@@ -87,6 +89,7 @@ undefined == null // => true</code></pre>
         <pre><code>0 === "0" // => false
 ![] === [] // => false
 undefined === null // => false</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-9">
     <header>
         <h1>Jak uzyskać pustą tablicę bez tworzenia nowej?</h1>
@@ -102,6 +105,7 @@ arr = [];</code></pre>
 arr.length = 0;
 console.log(arr); // []</code></pre>
     <p>W ten sposób korzystamy zawsze z tej samej struktury danych i przy okazji unikamy tworzenia nowej tablicy.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-8">
     <header>
         <h1>Zapomnij o jQuery, jest querySelector</h1>
@@ -114,6 +118,7 @@ console.log(arr); // []</code></pre>
         <pre><code>var news = document.querySelectorAll("div.news"); // wszystkie elementy div.news
 var news = document.querySelector("div.news"); // tylko pierwszy element</code></pre>
         <p>Sprawdź wsparcie dla querySelector wśród współczesnych przeglądarek na <a href="http://caniuse.com/#feat=queryselector">canIUse.com</a>.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-7">
     <header>
         <h1>Tworzenie wewnętrznego scope</h1>
@@ -125,6 +130,7 @@ var news = document.querySelector("div.news"); // tylko pierwszy element</code><
     var privateVar = 1; 
 })();
 console.log(privateVar); // undefined</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-6">
     <header>
         <h1>Jak sprawdzić, czy zmienna jest tablicą?</h1>
@@ -142,6 +148,7 @@ if (Object.prototype.toString.call(arr) === "[object Array]") {}</code></pre>
     <p>Na szczęście najnowsza wersja ECMAScript 5 wprowadza funkcję <em>Array.isArray</em>:</p>
     <pre><code>var arr = [1, 2, 3];
 if (Array.isArray(arr)) {}</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-5">
     <header>
         <h1>Największy i najmniejszy element w tablicy</h1>
@@ -156,6 +163,7 @@ Math.max.apply(null, arr); // 3</code></pre>
         <p>Podobnie da się zrobić z najmniejszą wartością, wykorzystując <em>Math.min</em>:</p>
         <pre><code>var arr = [1, 2, 3];
 Math.min.apply(null, arr); // 1</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-4">
     <header>
         <h1>Tworzenie tablic i obiektów</h1>
@@ -170,6 +178,7 @@ var obj = new Object();</code></pre>
 var obj = {};</code></pre>
         <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
         <pre><code>var Object = null;</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-3">
     <header>
         <h1>"for in" nie dla tablic</h1>
@@ -182,6 +191,7 @@ for (var i in obj) {
     console.log(i); // "key"
 }</code></pre>
         <p>For in używany z tablicami będzie iterował również przez własności <em>.prototype</em> tablicy, co jest efektem niepożądanym.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-2">
     <header>
         <h1>parseInt("08")</h1>
@@ -191,6 +201,7 @@ for (var i in obj) {
     <p>Pamiętaj, że <em>parseInt</em> traktuje stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
         <pre><code>parseInt("08"); // 0
 parseInt("08", 10); // 8</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article><article id="tip-1">
     <header>
         <h1>JSLint Twoim przyjacielem</h1>
@@ -199,6 +210,7 @@ parseInt("08", 10); // 8</code></pre>
     </header>
     <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
         <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>
                 <aside class="sidebar column last">
@@ -325,5 +337,13 @@ parseInt("08", 10); // 8</code></pre>
           })();
 
         </script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=106892349421445";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>

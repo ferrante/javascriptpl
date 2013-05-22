@@ -9,7 +9,6 @@
         <title>Jak sprawdzić, czy zmienna jest tablicą?</title>
     </head>
     <body class="language-javascript">
-
         <div class="wrap">
             <div class="content columns">
                 <header class="page-header">
@@ -35,6 +34,7 @@ if (Object.prototype.toString.call(arr) === "[object Array]") {}</code></pre>
     <p>Na szczęście najnowsza wersja ECMAScript 5 wprowadza funkcję <em>Array.isArray</em>:</p>
     <pre><code>var arr = [1, 2, 3];
 if (Array.isArray(arr)) {}</code></pre>
+	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>
                 <aside class="sidebar column last">
@@ -161,5 +161,13 @@ if (Array.isArray(arr)) {}</code></pre>
           })();
 
         </script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=106892349421445";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>
