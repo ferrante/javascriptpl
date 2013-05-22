@@ -71,7 +71,7 @@ indexFileTemplateData.articles.map(function(article, idx) {
 
 var indexOutput = Mustache.render(indexTemplate, {
     articles: indexFileTemplateData.articles,
-    title: 'JavaScript.pl - naucz się JavaScriptu!'
+    title: 'Kursy, porady, książki - wszystko o JavaScript'
 }, {
     article: articleTemplate
 });
