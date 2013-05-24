@@ -1,0 +1,24 @@
+<article>
+    <title>Unix Timestamp</title>
+    <author>lukas</author>
+    <author_url>http://twitter.com/lukas_nowacki</author_url>
+    <date>2013-05-24</date>
+    <content>
+        <p>Aby uzyskać czas unixowy w milisekundach, mierzony od 1 stycznia 1970 00:00:00 UTC, używamy:</p>
+        <pre>
+            <code>
+new Date().getTime();
+            </code>
+        </pre>
+        <p>lub gdy nie zależy nam na starszych przeglądarkach:</p>
+        <pre>
+            <code>
+Date.now();
+            </code>
+        </pre>
+        <p>Istnieje również skrócona, jednak mniej czytelna wersja:</p>
+        <pre>
++new Date;
+        </pre>
+    </content>
+</article>
