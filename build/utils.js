@@ -18,7 +18,7 @@ exports.removeAccent = function(str) {
         if (a in map) {
             return map[a];
         } else if (a.toLowerCase() in map) {
-            return map[a].toUpperCase();
+            return map[a.toLowerCase()].toUpperCase();
         } else {
             return "";
         }
