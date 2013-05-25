@@ -6,7 +6,7 @@
         <link href="/css/main.css" rel="stylesheet" />
         <link href="http://f.fontdeck.com/s/css/jmBwByoYbwcbdS6OIMDcZ0MWIss/javascript.pl/23891.css" rel="stylesheet" />
         <link href="/favicon.png" rel="icon" type="image/png" />
-        <title>JSLint Twoim przyjacielem</title>
+        <title>Łączenie wartości tablic</title>
     </head>
     <body class="language-javascript">
         <div class="wrap">
@@ -17,14 +17,25 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
-<article id="tip-4">
+<article id="tip-14">
     <header>
-        <h1>JSLint Twoim przyjacielem</h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/jslint-twoim-przyjacielem.html">#4</a>
+        <h1>Łączenie wartości tablic</h1>
+        <span class="author"><a href="http://twitter.com/lukas_nowacki">lukas</a></span>
+        <a class="tip-counter" href="/articles/laczenie-wartosci-tablic.html">#14</a>
     </header>
-    <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
-        <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
+    <p>Gdy chcemy dodać zawartość tablicy do końca drugiej, jest na to dość prosty sposób:</p>
+        <pre>
+            <code>var a = ["raz", "dwa"];
+var b = ["trzy", "cztery"];
+
+Array.prototype.push.apply(a,b);
+            </code>
+        </pre>
+        <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
+        <pre>
+            <code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]
+            </code>
+        </pre>
 	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>

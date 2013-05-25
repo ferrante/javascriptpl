@@ -17,7 +17,48 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
-<article id="tip-13">
+<article id="tip-15">
+    <header>
+        <h1><a href="/articles/unix-timestamp.html">Unix Timestamp</a></h1>
+        <span class="author"><a href="http://twitter.com/lukas_nowacki">lukas</a></span>
+        <a class="tip-counter" href="/articles/unix-timestamp.html">#15</a>
+    </header>
+    <p>Aby uzyskać czas unixowy w milisekundach, mierzony od 1 stycznia 1970 00:00:00 UTC, używamy:</p>
+        <pre>
+            <code>
+new Date().getTime();
+            </code>
+        </pre>
+        <p>lub gdy nie zależy nam na starszych przeglądarkach:</p>
+        <pre>
+            <code>
+Date.now();
+            </code>
+        </pre>
+        <p>Istnieje również skrócona, jednak mniej czytelna wersja:</p>
+        <pre><code>+new Date;</code></pre>
+	
+</article><article id="tip-14">
+    <header>
+        <h1><a href="/articles/laczenie-wartosci-tablic.html">Łączenie wartości tablic</a></h1>
+        <span class="author"><a href="http://twitter.com/lukas_nowacki">lukas</a></span>
+        <a class="tip-counter" href="/articles/laczenie-wartosci-tablic.html">#14</a>
+    </header>
+    <p>Gdy chcemy dodać zawartość tablicy do końca drugiej, jest na to dość prosty sposób:</p>
+        <pre>
+            <code>var a = ["raz", "dwa"];
+var b = ["trzy", "cztery"];
+
+Array.prototype.push.apply(a,b);
+            </code>
+        </pre>
+        <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
+        <pre>
+            <code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]
+            </code>
+        </pre>
+	
+</article><article id="tip-13">
     <header>
         <h1><a href="/articles/wartosc-nan.html">Wartość NaN</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
@@ -92,25 +133,9 @@ undefined === null // => false</code></pre>
 	
 </article><article id="tip-9">
     <header>
-        <h1><a href="/articles/jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">Jak uzyskać pustą tablicę bez tworzenia nowej?</a></h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">#9</a>
-    </header>
-    <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
-        <pre><code>var arr = [1, 2, 3];
-// ...
-arr = [];</code></pre>
-        <p>Jest to dobry pomysł, ale jeśli zależy nam na optymalizacji nawet tak trywialnego przypadku (sprawdza się to w kontekście developmentu gier, gdzie najlepiej zużywać jak najmniej pamięci) możemy skorzystać z właściwości <em>length</em>:</p>
-        <pre><code>var arr = [1, 2, 3];
-arr.length = 0;
-console.log(arr); // []</code></pre>
-    <p>W ten sposób korzystamy zawsze z tej samej struktury danych i przy okazji unikamy tworzenia nowej tablicy.</p>
-	
-</article><article id="tip-8">
-    <header>
         <h1><a href="/articles/zapomnij-o-jquery-jest-queryselector.html">Zapomnij o jQuery, jest querySelector</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/zapomnij-o-jquery-jest-queryselector.html">#8</a>
+        <a class="tip-counter" href="/articles/zapomnij-o-jquery-jest-queryselector.html">#9</a>
     </header>
     <p>Największą zaletą frameworka jQuery był łatwy sposób pobierania elementów drzewa DOM według selektorów CSS. Na przykład:</p>
         <pre><code>var news = $("div.news");</code></pre>
@@ -119,23 +144,11 @@ console.log(arr); // []</code></pre>
 var news = document.querySelector("div.news"); // tylko pierwszy element</code></pre>
         <p>Sprawdź wsparcie dla querySelector wśród współczesnych przeglądarek na <a href="http://caniuse.com/#feat=queryselector">canIUse.com</a>.</p>
 	
-</article><article id="tip-7">
-    <header>
-        <h1><a href="/articles/tworzenie-wewnetrznego-scope.html">Tworzenie wewnętrznego scope</a></h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/tworzenie-wewnetrznego-scope.html">#7</a>
-    </header>
-    <p>Dzięki automatycznemu wywoływaniu anonimowych funkcji możesz łatwo wprowadzić wewnętrzny scope zmiennych, dzięki czemu będą one dostępne tylko w tej funkcji.</p>
-        <pre><code>(function() {
-    var privateVar = 1; 
-})();
-console.log(privateVar); // undefined</code></pre>
-	
-</article><article id="tip-6">
+</article><article id="tip-8">
     <header>
         <h1><a href="/articles/jak-sprawdzic-czy-zmienna-jest-tablica.html">Jak sprawdzić, czy zmienna jest tablicą?</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/jak-sprawdzic-czy-zmienna-jest-tablica.html">#6</a>
+        <a class="tip-counter" href="/articles/jak-sprawdzic-czy-zmienna-jest-tablica.html">#8</a>
     </header>
     <p>Sprawdzenie, czy zmienna jest tablicą było w JavaScript nie do końca prostym zadaniem. Niestety, <em>typeof</em> nie daje nam jednoznacznej odpowiedzi, ponieważ zwraca to samo dla tablic i obiektów:</p>
         <pre><code>var arr = [1, 2, 3];
@@ -149,11 +162,11 @@ if (Object.prototype.toString.call(arr) === "[object Array]") {}</code></pre>
     <pre><code>var arr = [1, 2, 3];
 if (Array.isArray(arr)) {}</code></pre>
 	
-</article><article id="tip-5">
+</article><article id="tip-7">
     <header>
         <h1><a href="/articles/najwiekszy-i-najmniejszy-element-w-tablicy.html">Największy i najmniejszy element w tablicy</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/najwiekszy-i-najmniejszy-element-w-tablicy.html">#5</a>
+        <a class="tip-counter" href="/articles/najwiekszy-i-najmniejszy-element-w-tablicy.html">#7</a>
     </header>
     <p>Przyjmijmy, że mamy do czynienia z następującą tablicą:</p>
         <pre><code>var arr = [1, 2, 3];</code></pre>
@@ -164,20 +177,42 @@ Math.max.apply(null, arr); // 3</code></pre>
         <pre><code>var arr = [1, 2, 3];
 Math.min.apply(null, arr); // 1</code></pre>
 	
+</article><article id="tip-6">
+    <header>
+        <h1><a href="/articles/tworzenie-wewnetrznego-scope.html">Tworzenie wewnętrznego scope</a></h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/tworzenie-wewnetrznego-scope.html">#6</a>
+    </header>
+    <p>Dzięki automatycznemu wywoływaniu anonimowych funkcji możesz łatwo wprowadzić wewnętrzny scope zmiennych, dzięki czemu będą one dostępne tylko w tej funkcji.</p>
+        <pre><code>(function() {
+    var privateVar = 1; 
+})();
+console.log(privateVar); // undefined</code></pre>
+	
+</article><article id="tip-5">
+    <header>
+        <h1><a href="/articles/jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">Jak uzyskać pustą tablicę bez tworzenia nowej?</a></h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/jak-uzyskac-pusta-tablice-bez-tworzenia-nowej.html">#5</a>
+    </header>
+    <p>Załóżmy, że dysponujesz gotową tablicą i chcesz usunąć jej wszystkie elementy. Z reguły robi się to tak:</p>
+        <pre><code>var arr = [1, 2, 3];
+// ...
+arr = [];</code></pre>
+        <p>Jest to dobry pomysł, ale jeśli zależy nam na optymalizacji nawet tak trywialnego przypadku (sprawdza się to w kontekście developmentu gier, gdzie najlepiej zużywać jak najmniej pamięci) możemy skorzystać z właściwości <em>length</em>:</p>
+        <pre><code>var arr = [1, 2, 3];
+arr.length = 0;
+console.log(arr); // []</code></pre>
+    <p>W ten sposób korzystamy zawsze z tej samej struktury danych i przy okazji unikamy tworzenia nowej tablicy.</p>
+	
 </article><article id="tip-4">
     <header>
-        <h1><a href="/articles/tworzenie-tablic-i-obiektow.html">Tworzenie tablic i obiektów</a></h1>
+        <h1><a href="/articles/jslint-twoim-przyjacielem.html">JSLint Twoim przyjacielem</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/tworzenie-tablic-i-obiektow.html">#4</a>
+        <a class="tip-counter" href="/articles/jslint-twoim-przyjacielem.html">#4</a>
     </header>
-    <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
-        <pre><code>var arr = new Array();
-var obj = new Object();</code></pre>
-        <p>W JavaScript robi się to następująco:</p>
-        <pre><code>var arr = [];
-var obj = {};</code></pre>
-        <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
-        <pre><code>var Object = null;</code></pre>
+    <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
+        <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
 	
 </article><article id="tip-3">
     <header>
@@ -194,22 +229,28 @@ for (var i in obj) {
 	
 </article><article id="tip-2">
     <header>
+        <h1><a href="/articles/tworzenie-tablic-i-obiektow.html">Tworzenie tablic i obiektów</a></h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/tworzenie-tablic-i-obiektow.html">#2</a>
+    </header>
+    <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
+        <pre><code>var arr = new Array();
+var obj = new Object();</code></pre>
+        <p>W JavaScript robi się to następująco:</p>
+        <pre><code>var arr = [];
+var obj = {};</code></pre>
+        <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
+        <pre><code>var Object = null;</code></pre>
+	
+</article><article id="tip-1">
+    <header>
         <h1><a href="/articles/parseint08.html">parseInt("08")</a></h1>
         <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/parseint08.html">#2</a>
+        <a class="tip-counter" href="/articles/parseint08.html">#1</a>
     </header>
     <p>Pamiętaj, że <em>parseInt</em> traktuje stringa jako liczbę w systemie ósemkowym, jeśli na jego początku pojawi się "0". Dobrą praktyką jest umieszczanie zawsze "10" jako drugiego argumentu, który mówi, że powinniśmy sparsować liczbę w systemie dziesiętnym.</p>
         <pre><code>parseInt("08"); // 0
 parseInt("08", 10); // 8</code></pre>
-	
-</article><article id="tip-1">
-    <header>
-        <h1><a href="/articles/jslint-twoim-przyjacielem.html">JSLint Twoim przyjacielem</a></h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/jslint-twoim-przyjacielem.html">#1</a>
-    </header>
-    <p>Bardzo popularnym rozwiązaniem pozwalającym sprawdzać poprawność kodu pod względem dobrych praktyk jest <a href="http://jslint.com">JSLint</a> autorstwa <a href="http://crockford.com">Douglasa Crockforda</a>.</p><p>Alternatywnym projektem dla JSLint jest... <a href="http://jshint.com/">JSHint</a>.</p>
-        <p>Oba projekty można użyć w systemach continuous integration, które mogą np. sprawdzać po każdym commicie, czy kod jest poprawny.</p>
 	
 </article>                    </section>
                 </div>
