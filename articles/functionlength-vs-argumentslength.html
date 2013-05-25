@@ -6,7 +6,7 @@
         <link href="/css/main.css" rel="stylesheet" />
         <link href="http://f.fontdeck.com/s/css/jmBwByoYbwcbdS6OIMDcZ0MWIss/javascript.pl/23891.css" rel="stylesheet" />
         <link href="/favicon.png" rel="icon" type="image/png" />
-        <title>"for in" nie dla tablic</title>
+        <title>Function.length vs arguments.length</title>
     </head>
     <body class="language-javascript">
         <div class="wrap">
@@ -17,18 +17,19 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
-<article id="tip-1">
+<article id="tip-16">
     <header>
-        <h1>"for in" nie dla tablic</h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/for-in-nie-dla-tablic.html">#1</a>
+        <h1>Function.length vs arguments.length</h1>
+        <span class="author"><a href="http://twitter.com/lukas_nowacki">lukas</a></span>
+        <a class="tip-counter" href="/articles/functionlength-vs-argumentslength.html">#16</a>
     </header>
-    <p>Pamiętaj, że pętle for in stworzone są tylko i wyłącznie do iteracji po obiektach:</p>
-        <pre><code>var obj = { key : 1 };
-for (var i in obj) {
-    console.log(i); // "key"
-}</code></pre>
-        <p>For in używany z tablicami będzie iterował również przez własności <em>.prototype</em> tablicy, co jest efektem niepożądanym.</p>
+    <p>Obiekt Function w JavaScript posiada właściwość <em>length</em>, która zwraca ilość oczekiwanych przez daną funkcję argumentów. Aby dowiedzieć się, ile argumentów zostało funkcji przekazanych, możemy użyć lokalnej dla danej funkcji zmiennej <em>arguments</em>:</p>
+        <pre><code>var a = function(one, two, three, four) {
+    return arguments.length;
+}
+
+a.length; // 4
+a(1,2,3); // 3</code></pre>
 	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>
