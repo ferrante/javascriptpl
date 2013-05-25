@@ -4,7 +4,7 @@
     <author_url>http://twitter.com/lukas_nowacki</author_url>
     <date>2013-05-25</date>
     <content>
-        <p>Obiekt Function w JavaScript posiada właściwość <em>length</em>, która zwraca ilość oczekiwanych przez daną funkcję argumentów. Aby dowiedzieć się, ile argumentów zostało funkcji przekazanych, możemy użyć lokalnej dla danej funkcji zmiennej <em>arguments</em>:</p>
+        <p>Obiekt Function w JavaScript posiada własność <em>length</em>, która zwraca ilość oczekiwanych przez daną funkcję argumentów. Aby dowiedzieć się, ile argumentów zostało funkcji przekazanych, możemy użyć lokalnej dla danej funkcji zmiennej <em>arguments</em>:</p>
         <pre><code>var a = function(one, two, three, four) {
     return arguments.length;
 }
