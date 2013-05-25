@@ -25,14 +25,12 @@
     </header>
     <p>Aby uzyskać czas unixowy w milisekundach, mierzony od 1 stycznia 1970 00:00:00 UTC, używamy:</p>
         <pre>
-            <code>
-new Date().getTime();
+            <code>new Date().getTime();
             </code>
         </pre>
         <p>lub gdy nie zależy nam na starszych przeglądarkach:</p>
         <pre>
-            <code>
-Date.now();
+            <code>Date.now();
             </code>
         </pre>
         <p>Istnieje również skrócona, jednak mniej czytelna wersja:</p>
@@ -45,18 +43,12 @@ Date.now();
         <a class="tip-counter" href="/articles/laczenie-wartosci-tablic.html">#14</a>
     </header>
     <p>Gdy chcemy dodać zawartość tablicy do końca drugiej, jest na to dość prosty sposób:</p>
-        <pre>
-            <code>var a = ["raz", "dwa"];
+        <pre><code>var a = ["raz", "dwa"];
 var b = ["trzy", "cztery"];
 
-Array.prototype.push.apply(a,b);
-            </code>
-        </pre>
+Array.prototype.push.apply(a,b);</code></pre>
         <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
-        <pre>
-            <code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]
-            </code>
-        </pre>
+        <pre><code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]</code></pre>
 	
 </article><article id="tip-13">
     <header>

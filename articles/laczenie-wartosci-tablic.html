@@ -24,18 +24,12 @@
         <a class="tip-counter" href="/articles/laczenie-wartosci-tablic.html">#14</a>
     </header>
     <p>Gdy chcemy dodać zawartość tablicy do końca drugiej, jest na to dość prosty sposób:</p>
-        <pre>
-            <code>var a = ["raz", "dwa"];
+        <pre><code>var a = ["raz", "dwa"];
 var b = ["trzy", "cztery"];
 
-Array.prototype.push.apply(a,b);
-            </code>
-        </pre>
+Array.prototype.push.apply(a,b);</code></pre>
         <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
-        <pre>
-            <code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]
-            </code>
-        </pre>
+        <pre><code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]</code></pre>
 	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>

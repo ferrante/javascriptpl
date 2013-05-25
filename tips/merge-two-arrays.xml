@@ -5,17 +5,11 @@
     <date>2013-05-24</date>
     <content>
         <p>Gdy chcemy dodać zawartość tablicy do końca drugiej, jest na to dość prosty sposób:</p>
-        <pre>
-            <code>var a = ["raz", "dwa"];
+        <pre><code>var a = ["raz", "dwa"];
 var b = ["trzy", "cztery"];
 
-Array.prototype.push.apply(a,b);
-            </code>
-        </pre>
+Array.prototype.push.apply(a,b);</code></pre>
         <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
-        <pre>
-            <code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]
-            </code>
-        </pre>
+        <pre><code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]</code></pre>
     </content>
 </article>
