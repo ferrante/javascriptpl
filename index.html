@@ -19,9 +19,24 @@
                     <section class="article-list">
 <article id="tip-17">
     <header>
+        <h1><a href="/articles/jak-usunac-element-z-tablicy.html">Jak usunąć element z tablicy</a></h1>
+        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
+        <a class="tip-counter" href="/articles/jak-usunac-element-z-tablicy.html">#17</a>
+    </header>
+    <p>W celu usunięcia elementu o danym indeksie w tablicy, używamy funkcji <code>splice</code>:</p>
+        <pre><code>var arr = [1, 2, 3];
+arr.splice(0, 1);
+console.log(arr); // [2, 3]</code></pre>
+        <p>Pierwszy argument oznacza numer indeksu, od którego chcemy zacząć operację usuwania, a drugi liczbe elementów, których chcemy usunąć. W powyższym przykładzie chcemy usunąć jeden element poczynając od indeksu 0.</p>
+        <p>Warto dodać, że funkcja ta zwraca tablicę elementów, które usunęliśmy:</p>
+        <pre><code>var arr = [3, 4, 6];
+console.log(arr.splice(2, 1)); // [6]</code></pre>
+	
+</article><article id="tip-16">
+    <header>
         <h1><a href="/articles/functionlength-vs-argumentslength.html">Function.length vs arguments.length</a></h1>
         <span class="author"><a href="http://twitter.com/lukas_nowacki">lukas</a></span>
-        <a class="tip-counter" href="/articles/functionlength-vs-argumentslength.html">#17</a>
+        <a class="tip-counter" href="/articles/functionlength-vs-argumentslength.html">#16</a>
     </header>
     <p>Obiekt Function w JavaScript posiada własność <em>length</em>, która zwraca ilość oczekiwanych przez daną funkcję argumentów. Aby dowiedzieć się, ile argumentów zostało funkcji przekazanych, możemy użyć lokalnej dla danej funkcji zmiennej <em>arguments</em>:</p>
         <pre><code>var a = function(one, two, three, four) {
@@ -30,18 +45,6 @@
 
 a.length; // 4
 a(1,2,3); // 3</code></pre>
-	
-</article><article id="tip-16">
-    <header>
-        <h1><a href="/articles/jak-usunac-element-z-tablicy.html">Jak usunąć element z tablicy</a></h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/jak-usunac-element-z-tablicy.html">#16</a>
-    </header>
-    <p>W celu usunięcia elementu o danym indeksie w tablicy, używamy funkcji <code>splice</code>:</p>
-        <pre><code>var arr = [1, 2, 3];
-arr.splice(0, 1);
-console.log(arr); // [2, 3]</code></pre>
-        <p>Pierwszy argument oznacza numer indeksu, od którego chcemy zacząć operację usuwania, a drugi liczbe elementów, których chcemy usunąć. W powyższym przykładzie chcemy usunąć jeden element poczynając od indeksu 0.</p>
 	
 </article><article id="tip-15">
     <header>
