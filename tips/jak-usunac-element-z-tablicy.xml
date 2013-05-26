@@ -1,0 +1,16 @@
+<article>
+    <title>Jak usunąć element z tablicy</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2013-05-25 20:00</date>
+    <content>
+        <p>W celu usunięcia elementu o danym indeksie w tablicy, używamy funkcji <code>splice</code>:</p>
+        <pre><code>var arr = [1, 2, 3];
+arr.splice(0, 1);
+console.log(arr); // [2, 3]</code></pre>
+        <p>Pierwszy argument oznacza numer indeksu, od którego chcemy zacząć operację usuwania, a drugi liczbę elementów, które chcemy usunąć. W powyższym przykładzie chcemy pozbyć się jednego elementu, poczynając od indeksu 0.</p>
+        <p>Warto dodać, że funkcja ta zwraca tablicę elementów, które usunęliśmy:</p>
+        <pre><code>var arr = [3, 4, 6];
+console.log(arr.splice(2, 1)); // [6]</code></pre>
+    </content>
+</article>
