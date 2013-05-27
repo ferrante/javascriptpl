@@ -30,6 +30,10 @@ var b = ["trzy", "cztery"];
 Array.prototype.push.apply(a,b);</code></pre>
         <p>Wartości z tablicy <strong>b</strong> zostaną dodane do <strong>a</strong>:</p>
         <pre><code>console.log(a); // ["raz", "dwa", "trzy", "cztery"]</code></pre>
+        <p>Drugim sposobem, jeżeli nie chcemy modyfikować oryginalnych tablic lub mamy do połączenia więcej niż dwie tablice, jest <em>concat</em>:</p>
+        <pre><code>var c = ["pięć", "sześć"];
+var d = a.concat(b, c);
+console.log(d); // ["raz", "dwa", "trzy", "cztery", "pięć", "sześć"]</code></pre>
 	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>
