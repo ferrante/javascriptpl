@@ -1,0 +1,20 @@
+<article>
+    <title>Dziedziczenie z Object.create</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2013-05-31</date>
+    <content>
+        <p>Dziedziczenie w JavaScript można uzyskać na kilka sposobów. Jedną z dostępnych metod jest użycie <code>Object.create</code> (nowa konstrukcja z ECMAScript 5), gdzie pierwszy argument to obiekt, na podstawie którego ma zostać utworzony nowy. Zaawansowani programiści z łatwością dostrzegą, że pierwszym argumentem funkcji <code>Object.create</code> jest tak naprawdę prototyp, który służy jako baza do utworzenia nowego obiektu.</p>
+        <pre><code>var human = { 
+    name: "", 
+    gender: null, 
+    getName: function() { return this.name; } 
+}; 
+
+var girl = Object.create(human); 
+girl.gender = "female"; 
+girl.name = "Veronica"; 
+console.log(girl.getName()); // Veronica</code></pre>
+    <p>
+    </content>
+</article>
