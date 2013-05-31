@@ -1,0 +1,13 @@
+<article>
+    <title>Poprawne dodawanie zdarzeń</title>
+    <author>varjs</author>
+    <author_url>http://twitter.com/varjs</author_url>
+    <date>2013-05-31</date>
+    <content>
+        <p>Poprawną metodą dodawania zdarzeń zgodnie ze standardami jest funkcja <code>addEventListener</code>. Przykładowe użycie wygląda tak:</p>
+        <pre><code>var element = document.getElementById("some");
+element.addEventListener("click", function() {
+    console.log("foobar");
+}, false);</code></pre>
+    </content>
+</article>
