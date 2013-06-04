@@ -1,0 +1,21 @@
+<article>
+    <title>Pętle for</title>
+    <author>end3r</author>
+    <author_url>http://twitter.com/end3r</author_url>
+    <date>2013-06-04</date>
+    <content>
+        <p>Zapewne wiele razy w swoim kodzie korzystałeś z pętli <code>for</code>, zazwyczaj wygląda ona tak:</p>
+        <pre><code>for (var i = 0; i &lt; array.length; i++) {
+    // array[i]
+}</code></pre>
+        <p>Prawdopodobnie jest to najczęściej stosowana konstrukcja, ale warto pamiętać o tym, iż nie jedyna. Prede wszystkim zwróćmy uwagę na <code>array.length</code>, do którego odwołujemy się przy kolejnych iteracjach odczytując za każdym razem tę samą wartość. Skoro tak, to możemy lekko zmodyfikować naszą pętlę zapisując wielkość tablicy w zmiennej:</p>
+        <pre><code>for (var i = 0, len = array.length; i &lt; len; i++) {
+    // array[i]
+}</code></pre>
+        <p>Jeśli potrzebujemy natomiast przeiterować tablicę od końca zamiast od początku, to możemy skorzystać z poniższej konstrukcji:</p>
+        <pre><code>for (var i = array.length; i &gt; 0; i--) {
+    // array[i]
+}</code></pre>
+        <p>Oczywiście są to tylko najprostsze przykłady - możemy dowolnie modyfikować pętle <code>for</code> dostosowując je do naszych potrzeb.</p>
+    </content>
+</article>
