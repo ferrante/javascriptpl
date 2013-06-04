@@ -6,7 +6,7 @@
         <link href="/css/main.css" rel="stylesheet" />
         <link href="http://f.fontdeck.com/s/css/jmBwByoYbwcbdS6OIMDcZ0MWIss/javascript.pl/23891.css" rel="stylesheet" />
         <link href="/favicon.png" rel="icon" type="image/png" />
-        <title>Tworzenie tablic i obiektów</title>
+        <title>Pętle for</title>
     </head>
     <body class="language-javascript">
         <div class="wrap">
@@ -17,20 +17,25 @@
                 </header>
                 <div class="column first">
                     <section class="article-list">
-<article id="tip-2">
+<article id="tip-20">
     <header>
-        <h1>Tworzenie tablic i obiektów</h1>
-        <span class="author"><a href="http://twitter.com/varjs">varjs</a></span>
-        <a class="tip-counter" href="/articles/tworzenie-tablic-i-obiektow.html">#2</a>
+        <h1>Pętle for</h1>
+        <span class="author"><a href="http://twitter.com/end3r">end3r</a></span>
+        <a class="tip-counter" href="/articles/petle-for.html">#20</a>
     </header>
-    <p>Zapomnij o tworzeniu tablic i obiektów w, wydawałoby się, klasyczny sposób:</p>
-        <pre><code>var arr = new Array();
-var obj = new Object();</code></pre>
-        <p>W JavaScript robi się to następująco:</p>
-        <pre><code>var arr = [];
-var obj = {};</code></pre>
-        <p>JavaScript umożliwia tworzenie tych struktur natywnie, nie musimy dodatkowo wołać ich konstruktora. Poza tym można je nadpisać, co może przysporzyć dużo problemów:</p>
-        <pre><code>var Object = null;</code></pre>
+    <p>Zapewne wiele razy w swoim kodzie korzystałeś z pętli <code>for</code>, zazwyczaj wygląda ona tak:</p>
+        <pre><code>for (var i = 0; i &lt; array.length; i++) {
+    // array[i]
+}</code></pre>
+        <p>Prawdopodobnie jest to najczęściej stosowana konstrukcja, ale warto pamiętać o tym, iż nie jedyna. Prede wszystkim zwróćmy uwagę na <code>array.length</code>, do którego odwołujemy się przy kolejnych iteracjach odczytując za każdym razem tę samą wartość. Skoro tak, to możemy lekko zmodyfikować naszą pętlę zapisując wielkość tablicy w zmiennej:</p>
+        <pre><code>for (var i = 0, len = array.length; i &lt; len; i++) {
+    // array[i]
+}</code></pre>
+        <p>Jeśli potrzebujemy natomiast przeiterować tablicę od końca zamiast od początku, to możemy skorzystać z poniższej konstrukcji:</p>
+        <pre><code>for (var i = array.length; i &gt; 0; i--) {
+    // array[i]
+}</code></pre>
+        <p>Oczywiście są to tylko najprostsze przykłady - możemy dowolnie modyfikować pętle <code>for</code> dostosowując je do naszych potrzeb.</p>
 	<div class="fb-like" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 </article>                    </section>
                 </div>
