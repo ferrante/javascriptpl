@@ -13,7 +13,7 @@
     // array[i]
 }</code></pre>
         <p>Jeśli potrzebujemy natomiast przeiterować tablicę od końca zamiast od początku, to możemy skorzystać z poniższej konstrukcji:</p>
-        <pre><code>for (var i = array.length; i &gt; 0; i--) {
+        <pre><code>for (var i = array.length-1; i &gt;= 0; i--) {
     // array[i]
 }</code></pre>
         <p>Oczywiście są to tylko najprostsze przykłady - możemy dowolnie modyfikować pętle <code>for</code> dostosowując je do naszych potrzeb.</p>
