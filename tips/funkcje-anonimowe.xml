@@ -1,0 +1,19 @@
+<article>
+    <title>Funkcje anonimowe</title>
+    <author>alven</author>
+    <author_url>http://twitter.com/alvenaerle</author_url>
+    <date>2013-06-12</date>
+    <content>
+		<p>W JavaScript nie ma obowiązku przypisywania danym nazwy co oznacza, że poniższy kod jest poprawny i nie spowoduje błędu.</p>
+
+		<pre><code>[1, 2, 3]; "abcd"; null;</code></pre>
+
+		<p>Możemy powiedzieć, że zawiera dane anonimowe. Funkcje też są danymi, więc ich również możemy używać bez podania nazwy.</p>
+
+		<pre><code>function(x) { return x; }</code></pre>
+
+		<p>Zastosowanie takiego rozwiązania umożliwia w prosty sposób np.:<br>
+		- przekazanie funkcji anonimowej jako parametr do innej funkcji i wykonanie na niej operacji,<br>
+		- definiowanie i natychmiastowe uruchomienie funkcji anonimowej.</p>
+    </content>
+</article>
