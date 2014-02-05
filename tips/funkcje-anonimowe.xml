@@ -1,0 +1,27 @@
+<article>
+    <title>Funkcje anonimowe</title>
+    <author>alven</author>
+    <author_url>http://twitter.com/alvenaerle</author_url>
+    <date>2013-06-12</date>
+    <content>
+		<p>Funkcja anonimowa to funkcja zadeklarowana bez nadania jej nazwy.</p>
+
+		<pre><code>var example = function() {
+    alert('I am anonymous');
+};
+
+example();</code></pre>
+		<p>Najczęstszym zastosowaniem funkcji anonimowych jest przekazanie ich innym funkcjom jako argumentu:</p>
+		<pre><code>setTimeout(function() { alert('Yeah!'); }, 1000);</code></pre>
+		<p>Możemy również użyć funkcji anonimowych jako domknięcia, np.:</p>
+		<pre><code>function hello() {
+    var greeting = "Hello ";
+
+    (function(name) {
+        alert(greeting + name);
+    })("John Smith");
+}  
+
+hello();</code></pre>
+    </content>
+</article>
